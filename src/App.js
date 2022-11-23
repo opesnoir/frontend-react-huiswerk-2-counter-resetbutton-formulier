@@ -1,6 +1,22 @@
 import React from 'react';
 import './App.css';
 
+//STAPPENPLAN
+// 1. button maken (met type, className en onClick event)
+// //  <button>
+//      type="button"
+//      className="btn"
+//      onClick={}
+//     </button>
+// 2. anonieme functie versus gewone functie schrijven;
+// 3. argument meegeven aan je functie;
+// 4. button ombouwen tot button component, met childeren;
+// 5. callback properties doorgeven aan het component;
+// 6. state en een plek om deze te tonen aanmaken;
+// 7. conditioneel renderen
+// 8. stateful components.
+
+
 function App() {
   return (
     <>
