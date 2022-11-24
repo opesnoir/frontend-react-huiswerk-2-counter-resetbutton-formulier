@@ -1,0 +1,16 @@
+.formulier-persoonsgegevens-container{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin: 20px;
+    padding: 10px;
+}
+
+
+
+

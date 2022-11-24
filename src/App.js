@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import Button from "./Components/buttons/Button";
-import Fruits from "./Components/fruitCounter/Fruits";
+
 
 
 //STAPPENPLAN
