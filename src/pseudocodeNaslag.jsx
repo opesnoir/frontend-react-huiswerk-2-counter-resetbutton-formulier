@@ -1,24 +1,24 @@
 //STAPPENPLAN PSEUDO CODE
-
+// !! componenten schrijf je altijd met hoofdletters, dus <Button> ipv <button>
 // 1. twee buttons maken, een met de naam +1 en de ander met de naam -1 (met type, className en onClick event)
 // normale manier (eerst deze manier, dan pas component maken om er zeker van te zijn dat je niks vergeet):
 // function App() {
 //    return (
 //        <>
 //            <h1>Fruitmand bezorgservice</h1>
-//            <button
+//            <Button
 //                  type="button"
 //                  className="btn"
 //                  onClick={console.log('+1')}>
 //                          Button + 1
-//            </button>
-//            <button
+//            </Button>
+//            <Button
 //                  type="button"
 //                  className="btn"
 //                  onClick={console.log ('-1')}
 //            >
 //                          Button - 1
-//             </button>
+//             </Button>
 //        </>
 //    );
 //}
@@ -40,13 +40,13 @@
 //}
 //        <>
 //            <h1>Fruitmand bezorgservice</h1>
-//            <button
+//            <Button
 //                  type="button"
 //                  className="btn"
 //                  onClick={addOne}
 //             >
 //                          Button + 1
-//            </button>
+//            </Button>
 //
 //
 // Anonieme functie met als argument een parameter: 'param'
@@ -57,13 +57,13 @@
 //}
 //        <>
 //            <h1>Fruitmand bezorgservice</h1>
-//            <button
+//            <Button
 //                  type="button"
 //                  className="btn"
 //                  onClick={() => addOne (param: '+1'}
 //             >
 //                          Button + 1
-//            </button>
+//            </Button>
 
 // 3. button ombouwen tot button component, met children;
 // a. maak in je src folder een Componenten map aan;
@@ -93,12 +93,12 @@ const Button = ( { type, className, children } ) => {
 export default Button;*/
 //    in het Apps.js document:
 /*<>
-    <button
+    <Button
         type="button"
         className="btn"
         >
         childeren="verzenden"
-    </button>
+    </Button>
 </>*/
 
 // 4. callback properties doorgeven aan het component om hem herbruikbaar te maken;
@@ -146,6 +146,63 @@ export default Button;*/
  }*/
 
 // 5. state en een plek om deze te tonen aanmaken;
+//      a. state maak je altijd bovenin een pagina of binnen een component aan.
+//      b. state ontvangt altijd 2 waarden: 1. de naam van de variable en hij draagt ook de naam van de variabele 2. de setter (dit is de waarde die je toekent aan de desbetreffende variabele. de 2e waarde noem je altijd setCount of toggleCount (toggle = tegenovergestelde waarde, denk aan optie a vs optie b of dag vs nachtmodus etc.)
+//      c. syntax setState() of toggleState () afhankelijk van je doel;
+//      d. syntax state gebruiken is: useState (), in de () plaats je de initiele waarde, bij een counter bijv. 0. De initiele waarde kan van alles zijn: een string een array etc. state code:
+//App.jsx code:
+/*function App () {
+const [count, setCount] = useState (0) // bovenaan state initieren
+
+return (
+    <>
+        <p> Counter is: <strong> { count }</strong></p>
+        <button>...</button>
+    </>
+);
+}*/
+//App.jsx code met setCount ()
+/*Nu kan je de state code setCount () gebruiken in je functie:
+function App () {
+    function addOne (){
+       setCount('+1')}
+
+    function subtractOne (){
+        setCount('-1')}
+
+    return(
+        <>
+            <button
+                type="button"
+                className="btn"
+                clickHandler={ addOne }
+            >
+                + 1
+            </button>*/
+
 // 6. conditioneel renderen
+// Om iets conditioneel te renderen plaats je het tussen accolades {}
+//Toggle pakt de huidige waarde (bijv false) en met toggle wordt de huidige waarde geinvert (naar true). Dus toggle zegt wat is de huidige waarde, keer (toggle) die waarde om. Dat doe je door te klikken op onClick, dat is waar je toggle plaatst.
+/*App.jsx code met toggle op basis van je state conditioneel renderen:
+function App () {
+const [darkMode, toggleDarkMode ] = useState (false) // false is de initiele waarde
+
+function toggleTheme (){
+    toggleDarkMode (darkMode => !darkMode)
+}
+
+return (
+    <>
+        {darkMode === true? <p> Dark Mode Enabled</p> : <p> Light Mode Enabled</p>} // hier ben je conditioneel aan het renderen, tussen de {} en de : zegt als het eerste deel niet waar is, dan mag je dit doen. Je mag deze code ook zo schrijven:  {darkMode ? <p> Dark Mode Enabled</p> : <p> Light Mode Enabled</p>}.
+        <Button
+        type="button"
+        className="btn"
+        clickHandler={ toggleTheme }>
+            Toggle Theme
+        </Button>
+    </>
+);
+}*/
+
 // 7. stateful components.
 

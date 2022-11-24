@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
-import '../src/Components/Button'
+import Button from "./Components/buttons/Button";
+import Fruits from "./Components/fruitCounter/Fruits";
+
 
 //STAPPENPLAN
 // 1. button maken (met type, className en onClick event)
@@ -15,38 +17,11 @@ import '../src/Components/Button'
 
 function App() {
 
-    function addOne() {
-        console.log('+1')
-    }
-
-    function subtractOne(){
-        console.log('-1')
-    }
-
   return (
     <>
-      <h1>Fruitmand bezorgservice</h1>
-    <span>
-      <button
-          type="button"
-          className="btn"
-          onClick= {addOne}
-      >
-          + 1
-      </button>
-        <button
-            type="button"
-            className="btn"
-            onClick= {subtractOne}
-        >
-            - 1
-        </button>
-</span>
 
 
-
-
-    </>
+</>
   );
 }
 

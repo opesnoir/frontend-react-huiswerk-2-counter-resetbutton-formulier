@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div className="formulier-persoonsgegevens-container">
+    <form action="">
+        <fieldset>
+            <label for="input-firstname">Voornaam
+                <input type="text" name="username" id="input-firstname">
+            </label>
+            <label for="input-lastname">Achternaam
+                <input type="text" name="username" id="input-lastname">
+            </label>
+            <label for="user-age-number">0
+                <input type="number" name="user-age" id="user-age-number">
+            </label>
+            <label for="postcode">Postcode</label>
+            <input type="text" pattern="[0-9]{4} && [A-Z]{2}" id="postcode">
+            <!-- <input type="number" id="postcode" class="postcode" pattern="[0-9]{4}" placeholder="4 cijfers">
+             <input type="text" id="postcode" class="postcode" pattern="[A-Z]{2}" placeholder="2 letters">-->
+            <label for="deliverance-frequency">Bezorgfrequentie</label>
+            <select name="deliverance-frequency" id="deliverance-frequency">
+                <option value="weekly">Iedere week</option>
+                <option value="bi-weekly">Tweewekelijks (om de week)</option>
+                <option value="monthly">Iedere maand</option>
+            </select>
+            <label for="delivery-moment-dag" && label for="delivery-moment-avond">Bezorgmoment</label>
+            <input type="radio" name="moment" id="delivery-moment-dag" checked> Overdag </input>
+            <input type="radio" name="moment" id="delivery-moment-avond"> 's Avonds </input>
+            <!--  <input type="radio" name="delivery-moment" value="day" checked>Overdag</input>
+              <input type="radio" name="delivery-moment" value="night">'s Avonds</input>-->
+            <label for="remarks">Opmerkingen</label>
+            <textarea name="remark-textbox-area" id="remarks" cols="30" rows="10"></textarea>
+            <!-- <input type="text" name="remark-textbox" id="remarks">-->
+            <input type="checkbox" name="agreement-check-box" id="agreement-check-box">
+            <label for="agreement-check-box">Ik ga akkoord met de voorwaarden</label>
+            <button type="submit">Verzend</button>
+        </fieldset>
+    </form>
+
+
+</div>
+
+
+</body>
+</html>
