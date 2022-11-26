@@ -43,6 +43,7 @@ function App() {
                     sendButton="Verzend"
                 />
             </div>
+            <br/>
             <div className="containerFruitCounter">
                 <Fruitcounter
                     emoji="🍓"
