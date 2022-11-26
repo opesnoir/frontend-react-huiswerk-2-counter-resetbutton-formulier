@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import Formulier from "./Components/Formulier/Formulier";
-
-
+import Fruitcounter from "./Components/Fruitcounter/Fruitcounter";
+import Fruitcounterbutton from "./Components/Fruitcounter/Fruitcounterbutton";
 
 //STAPPENPLAN
 // 1. button maken (met type, className en onClick event)
@@ -41,10 +41,45 @@ function App() {
                     remark="Opmerking"
                     agreementCheckBox="Ik ga akkoord met de voorwaarden"
                     sendButton="Verzend"
-
                 />
             </div>
-
+            <div className="containerFruitCounter">
+                <Fruitcounter
+                    emoji="🍓"
+                    fruitType="Aardbeien"
+                    buttonAdd="+1"
+                    amount={0}
+                    buttonSubtract="-1"
+                />
+                <br/>
+                <Fruitcounter
+                    emoji="🍌"
+                    fruitType="Bananen"
+                    buttonAdd="+1"
+                    amount={0}
+                    buttonSubtract="-1"
+                />
+                <br/>
+                <Fruitcounter
+                    emoji="🍏"
+                    fruitType="Appels"
+                    buttonAdd="+1"
+                    amount={0}
+                    buttonSubtract="-1"
+                />
+                <br/>
+                <Fruitcounter
+                    emoji="🥝"
+                    fruitType="Kiwi's"
+                    buttonAdd="+1"
+                    amount={0}
+                    buttonSubtract="-1"
+                />
+                <br/>
+                <Fruitcounterbutton
+                    resetButton="Reset"
+                />
+            </div>
         </>
     );
 }
