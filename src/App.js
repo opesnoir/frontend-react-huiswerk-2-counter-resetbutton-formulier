@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Formulier from "./Components/Formulier/Formulier";
 import Fruitcounter from "./Components/Fruitcounter/Fruitcounter";
-import Fruitcounterbutton from "./Components/Fruitcounter/Fruitcounterbutton";
+
 
 //STAPPENPLAN
 // 1. button maken (met type, className en onClick event)
@@ -18,6 +18,7 @@ import Fruitcounterbutton from "./Components/Fruitcounter/Fruitcounterbutton";
 //2. formulier
 //3. componenten
 //4. logo en styling
+
 
 function App() {
 
@@ -44,42 +45,37 @@ function App() {
                 />
             </div>
             <br/>
-            <div className="containerFruitCounter">
+            <div className="containerFruitItems">
+                <br/>
                 <Fruitcounter
                     emoji="🍓"
                     fruitType="Aardbeien"
-                    buttonAdd="+1"
-                    amount={0}
-                    buttonSubtract="-1"
+                    buttonAdd="+"
+                    buttonMinus="-"
                 />
                 <br/>
                 <Fruitcounter
                     emoji="🍌"
                     fruitType="Bananen"
-                    buttonAdd="+1"
-                    amount={0}
-                    buttonSubtract="-1"
+                    buttonAdd="+"
+                    buttonMinus="-"
                 />
                 <br/>
                 <Fruitcounter
                     emoji="🍏"
                     fruitType="Appels"
-                    buttonAdd="+1"
-                    amount={0}
-                    buttonSubtract="-1"
+                    buttonAdd="+"
+                    buttonMinus="-"
                 />
                 <br/>
                 <Fruitcounter
                     emoji="🥝"
                     fruitType="Kiwi's"
-                    buttonAdd="+1"
-                    amount={0}
-                    buttonSubtract="-1"
+                    buttonAdd="+"
+                    buttonMinus="-"
+                    buttonReset="Reset"
                 />
-                <br/>
-                <Fruitcounterbutton
-                    resetButton="Reset"
-                />
+
             </div>
         </>
     );

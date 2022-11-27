@@ -1,24 +1,37 @@
-//1. React importeren met: import React from 'react';
-//2. formulier maken: rsc > tab;
-//3. formulier template maken;
+import React, {useState} from 'react';
 
-import React from 'react';
+function Fruitcounter({emoji, fruitType, buttonAdd, buttonMinus, buttonReset}) {
+    const [counter, setCounter] = useState(0)
 
-const Fruitcounter = ({emoji, fruitType, buttonAdd, amount, buttonSubtract, resetButton}) => {
     return (
         <>
-            <div className="fruitCounterContainer">
-                <fieldset>
-                    <article className="fruitcounter-content">
-                        <p className="fruitname">{emoji}{fruitType}</p>
-                        <button>{buttonAdd}</button>
-                        <p>{amount}</p>
-                        <button>{buttonSubtract}</button>
-                    </article>
+            <div>
+                <fieldset className="fruitCounterItems">
+                    <div className="itemsCounter">
+                        <p className="fruitName">{emoji}{fruitType}</p>
+                        <button
+                            className="buttonAddOne"
+                            onClick={() => setCounter(counter + 1)}>
+                            {buttonAdd}
+                        </button>
+                        <p> {counter}  </p>
+                        <button
+                            disabled={counter === 0}
+                            className="buttonMinusOne"
+                            onClick={() => setCounter(counter - 1)}>
+                            {buttonMinus}
+                        </button>
+                    </div>
                 </fieldset>
+                <button
+                    className="resetButton"
+                    onClick={() => (setCounter(0))}>
+                    {buttonReset}
+                </button>
+
             </div>
         </>
     );
-};
+}
 
 export default Fruitcounter;
