@@ -1,0 +1,19 @@
+.innerContainerFormulier{
+    margin: 25px;
+    padding: 30px 40px;
+    flex-basis: 1200px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+label{
+    padding-right: 20px;
+}
+
+.fieldsetFormulier{
+    padding: 40px;
+    flex-basis: 600px;
+}
+
+
+

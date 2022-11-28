@@ -1,0 +1,25 @@
+/*css reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.containerLogo {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.innerContainerLogo{
+    display: flex;
+    flex-direction: row;
+    padding: 30px 40px;
+    flex-basis: 1200px;
+    margin: 25px;
+}
+
+@media screen and (max-width: 1600px) {
+   /* hier invoeren wat je wil meegeven*/
+    }

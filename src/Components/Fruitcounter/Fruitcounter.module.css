@@ -1,0 +1,9 @@
+.fruitCounterItems{
+    display: flex;
+    flex-direction: row;
+    padding: 30px 40px;
+    flex-basis: 200px;
+    margin: 25px;
+
+}
+
