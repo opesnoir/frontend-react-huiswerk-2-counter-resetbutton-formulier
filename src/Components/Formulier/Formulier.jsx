@@ -10,6 +10,8 @@
 //6. vragen of het normaal is dat de code zo lang is.
 
 import React from 'react';
+import styles from "./Formulier.module.css";
+
 
 
 function Formulier({
@@ -34,8 +36,8 @@ function Formulier({
     return (
         <>
             <div>
-                <form>
-                    <h3>{formulierTitle}</h3>
+                <form className={styles["innerContainerFormulier"]}>
+                    <h3 className="itemForm">{formulierTitle}</h3>
                     <label htmlFor="firstName"> {firstName} </label>
                     <input type="text" name="userFirstName" id="firstName"/>
                     <br/>

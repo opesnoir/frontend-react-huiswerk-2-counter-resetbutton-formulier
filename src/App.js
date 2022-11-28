@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Formulier from "./Components/Formulier/Formulier";
 import Fruitcounter from "./Components/Fruitcounter/Fruitcounter";
+import logoimage from "./assets/screenshot-logo.png";
 
 
 //STAPPENPLAN
@@ -24,7 +25,10 @@ function App() {
 
     return (
         <>
-            <div className="containerForm">
+            <div className="outerContainer">
+            <img src={logoimage} alt="logo" className="innerContainerLogo"/>
+            </div>
+            <div className="innerContainerForm">
                 <Formulier
                     formulierTitle="Formulier"
                     firstName="Voornaam"
@@ -74,8 +78,9 @@ function App() {
                     buttonAdd="+"
                     buttonMinus="-"
                     buttonReset="Reset"
-                />
-
+                >
+                Reset
+                </Fruitcounter>
             </div>
         </>
     );

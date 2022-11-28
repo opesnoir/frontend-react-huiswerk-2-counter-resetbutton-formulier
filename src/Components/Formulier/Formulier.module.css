@@ -1,16 +1,19 @@
-.formulier-persoonsgegevens-container{
-    display: flex;
-    flex-direction: column;
+.innerContainerFormulier{
+    margin: 25px;
+    padding: 30px 40px;
+    flex-basis: 1200px;
     box-sizing: border-box;
-}
-form {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    margin: 20px;
-    padding: 10px;
+    font-size: 18px;
 }
 
+label{
+    padding-right: 20px;
+}
+
+.fieldsetFormulier{
+    padding: 40px;
+    flex-basis: 600px;
+}
 
 
 

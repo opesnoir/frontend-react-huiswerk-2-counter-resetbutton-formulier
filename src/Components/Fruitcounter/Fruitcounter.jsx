@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
+import styles from "./Fruitcounter.module.css";
 
-function Fruitcounter({emoji, fruitType, buttonAdd, buttonMinus, buttonReset}) {
+function Fruitcounter({emoji, fruitType, buttonAdd, buttonMinus, children}) {
     const [counter, setCounter] = useState(0)
 
     return (
         <>
             <div>
-                <fieldset className="fruitCounterItems">
-                    <div className="itemsCounter">
+                <fieldset className={styles["fruitCounterItems"]}>
+                    <div>
                         <p className="fruitName">{emoji}{fruitType}</p>
                         <button
                             className="buttonAddOne"
@@ -26,7 +27,7 @@ function Fruitcounter({emoji, fruitType, buttonAdd, buttonMinus, buttonReset}) {
                 <button
                     className="resetButton"
                     onClick={() => (setCounter(0))}>
-                    {buttonReset}
+                    {children}
                 </button>
 
             </div>

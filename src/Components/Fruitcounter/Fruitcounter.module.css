@@ -1,25 +1,9 @@
-section{
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    width: 500px;
-}
-
-.fruitcounter-content{
+.fruitCounterItems{
     display: flex;
     flex-direction: row;
-    gap: 1rem;
-    justify-content: center;
-    padding-top: 10px;
+    padding: 30px 40px;
+    flex-basis: 200px;
+    margin: 25px;
+
 }
 
-.fruitname {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.reset-button{
-    width: 500px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-}
